@@ -5,7 +5,6 @@
   <title>HaiGorilla406 – Minecraft Plugin Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HaiGorilla406 – Minecraft Plugin Developer, ECPlus, AxoSMP, Axolotelstadt, ManuSMP und mehr.">
-
   <style>
     :root {
       --bg: #050814;
@@ -17,19 +16,15 @@
       --card: #111729;
       --radius: 10px;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #101735 0, #050814 55%);
       color: var(--text);
       line-height: 1.6;
     }
-
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
     header {
       border-bottom: 1px solid rgba(255,255,255,0.05);
       position: sticky;
@@ -38,7 +33,6 @@
       background: linear-gradient(to bottom, rgba(5,8,20,0.9), rgba(5,8,20,0.7));
       z-index: 10;
     }
-
     .nav {
       max-width: 1100px;
       margin: 0 auto;
@@ -47,7 +41,6 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .nav-left span {
       font-weight: 700;
       letter-spacing: 0.06em;
@@ -55,23 +48,18 @@
       text-transform: uppercase;
       color: var(--muted);
     }
-
     .nav-right a {
       margin-left: 1.2rem;
       font-size: 0.9rem;
       color: var(--muted);
     }
-
     .nav-right a:hover { color: var(--accent); }
-
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2.5rem 1.5rem 3.5rem;
     }
-
     section { margin-bottom: 3rem; }
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -79,32 +67,27 @@
       align-items: center;
       padding-top: 1.5rem;
     }
-
     .hero-title {
       font-size: clamp(2.2rem, 4vw, 2.9rem);
       font-weight: 800;
       letter-spacing: 0.03em;
     }
-
     .hero-title span {
       background: linear-gradient(120deg, #35c9ff, #9b6bff);
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .hero-sub {
       margin-top: 0.9rem;
       color: var(--muted);
       max-width: 32rem;
     }
-
     .hero-tags {
       margin-top: 1.2rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
     }
-
     .tag {
       padding: 0.25rem 0.7rem;
       border-radius: 999px;
@@ -115,20 +98,17 @@
       letter-spacing: 0.08em;
       color: var(--muted);
     }
-
     .tag-primary {
       border-color: var(--accent-soft);
       background: radial-gradient(circle at top left, rgba(53,201,255,0.25), rgba(10,16,35,0.95));
       color: var(--accent);
     }
-
     .hero-actions {
       margin-top: 1.6rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
     }
-
     .btn {
       padding: 0.6rem 1.2rem;
       border-radius: 999px;
@@ -141,18 +121,15 @@
       background: transparent;
       color: var(--text);
     }
-
     .btn-primary {
       background: linear-gradient(135deg, #35c9ff, #9b6bff);
       border: none;
       box-shadow: 0 0 18px rgba(53,201,255,0.35);
     }
-
     .btn-outline:hover {
       border-color: var(--accent);
       color: var(--accent);
     }
-
     .hero-right {
       background: radial-gradient(circle at top, rgba(53,201,255,0.25), rgba(9,13,30,0.95));
       border-radius: 18px;
@@ -162,7 +139,14 @@
       position: relative;
       overflow: hidden;
     }
-
+    .hero-right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0, rgba(255,255,255,0.16), transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
     .pill {
       display: inline-flex;
       align-items: center;
@@ -175,7 +159,6 @@
       color: var(--muted);
       margin-bottom: 0.7rem;
     }
-
     .pill-dot {
       width: 7px;
       height: 7px;
@@ -183,19 +166,16 @@
       background: #35ff9b;
       box-shadow: 0 0 10px rgba(53,255,155,0.8);
     }
-
     .card-title {
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 0.2rem;
     }
-
     .card-sub {
       font-size: 0.85rem;
       color: var(--muted);
       margin-bottom: 0.9rem;
     }
-
     .badge {
       display: inline-flex;
       align-items: center;
@@ -209,37 +189,13 @@
       margin-right: 0.3rem;
       margin-bottom: 0.3rem;
     }
-
     .badge-strong {
       border-color: var(--accent-soft);
       color: var(--accent);
     }
-
-    /* --- MOBILE OPTIMIERUNG --- */
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      .hero-title { font-size: 2rem; }
-      .hero-sub { margin: 1rem auto; font-size: 1rem; }
-      .hero-tags, .hero-actions { justify-content: center; }
-      .hero-right { margin-top: 1.5rem; padding: 1rem; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .card { padding: 1.2rem; }
-      .contact-card { flex-direction: column; text-align: center; }
-      .contact-links a { margin: 0.4rem 0; font-size: 1rem; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title { font-size: 1.7rem; }
-      .btn { width: 100%; justify-content: center; padding: 0.8rem; }
-      .tag { font-size: 0.7rem; }
-      .pill-role { font-size: 0.7rem; }
-    }
-
   </style>
 </head>
-
 <body>
-
 <header>
   <div class="nav">
     <div class="nav-left">
@@ -254,30 +210,23 @@
 </header>
 
 <main>
-
   <section class="hero">
     <div>
       <div class="hero-title">
         <span>Minecraft Plugin Developer</span><br>
         mit Fokus auf ECPlus & SMP‑Infrastruktur
       </div>
-
       <p class="hero-sub">
         Sr.Dev auf <strong>AxoSMP</strong> und <strong>Axolotelstadt</strong>, Dev auf <strong>ManuSMP</strong> – mit eigenen Plugins wie
         <strong>ECPlus</strong>, die Server‑Alltag, Economy und Quality‑of‑Life‑Features auf ein stabiles technisches Fundament stellen.
       </p>
-
-      <div style="margin-top:0.8rem;">
-        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener"> Sr.Dev • AxoSMP</a> /</span>
-        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener"> Sr.Dev • Axolotelstadt</a> /</span>
-        <span class="pill-role"> <a href="https://discord.gg/zTQ8gfnrQc" target="_blank" rel="noopener"> Dev • ManuSMP</a> /</span>
-        <span class="pill-role">Eigene Plugins • AxoSMP @ Modrinth</span>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://modrinth.com/organization/axosmp" target="_blank">Zu meinen Plugins →</a>
+        <div class="hero-actions">
+        <a class="btn btn-primary" href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">
+          Zu meinen Plugins auf Modrinth →
+        </a>
         <a class="btn btn-outline" href="https://modrinth.com/plugin/ecplus" target="_blank" rel="noopener">
           ECPlus ansehen
+        </a>
       </div>
     </div>
 
@@ -286,25 +235,21 @@
         <span class="pill-dot"></span>
         Live im Einsatz auf mehreren SMP‑Netzwerken
       </div>
-
       <div class="card-title">ECPlus – Erweiterte Enderchest</div>
-
       <div class="card-sub">
         ECPlus erweitert die normale Enderchest um mehrere Seiten, die über Pfeile im Inventar navigierbar sind.
         Spieler können zusätzliche Seiten freischalten, basierend auf ihren Berechtigungen.
         Alle Inhalte werden individuell pro Spieler gespeichert.
       </div>
-
       <div>
         <span class="badge badge-strong">Core‑Plugin</span>
         <span class="badge">Enderchest‑Erweiterung</span>
         <span class="badge">Permissions‑System</span>
         <span class="badge">SMP‑Netzwerke</span>
       </div>
-
       <div class="meta">
-        <span>Projektseite: <a href="https://modrinth.com/plugin/ecplus" target="_blank">ECPlus</a></span><br>
-        <span>Organisation: <a href="https://modrinth.com/organization/axosmp" target="_blank">AxoSMP</a></span>
+        <span>Projektseite: <a href="https://modrinth.com/plugin/ecplus" target="_blank" rel="noopener">ECPlus auf Modrinth</a></span><br>
+        <span>Organisation: <a href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">AxoSMP</a></span>
       </div>
     </div>
   </section>
@@ -317,7 +262,7 @@
 
     <div class="card">
       <p>
-        <strong>HaiGorilla406 (Felix)</strong> ist Minecraft Plugin Developer und seit mehreren Jahren in verschiedenen
+        <strong>HaiGorilla406</strong> ist Minecraft Plugin Developer und seit mehreren Jahren in verschiedenen
         SMP‑Projekten als Entwickler aktiv. Als <strong>Sr.Dev auf AxoSMP und Axolotelstadt</strong> sowie
         <strong>Dev auf ManuSMP</strong> arbeitet er an stabilen, sauberen und technisch durchdachten Lösungen für
         Server‑Infrastruktur, Gameplay‑Systeme und Quality‑of‑Life‑Features.
@@ -326,18 +271,17 @@
       <p style="margin-top:0.6rem;">
         Sein Fokus liegt auf klarer Kommunikation, ruhigem und lösungsorientiertem Arbeiten sowie dem Anspruch,
         Probleme gründlich und nachhaltig zu lösen. Mit eigenen Projekten wie <strong>ECPlus</strong> veröffentlicht er
-        moderne, zuverlässige Plugins über die <strong>AxoSMP‑Organisation auf Modrinth</strong>.
+        moderne, zuverlässige Plugins über die <strong>AxoSMP‑Organisation auf Modrinth und bald auch auf builtbybit</strong>.
       </p>
 
       <div style="margin-top:0.8rem;">
-        <span class="pill-role pill-role-strong">Sr.Dev • AxoSMP</span>
-        <span class="pill-role pill-role-strong">Sr.Dev • Axolotelstadt</span>
-        <span class="pill-role">Dev • ManuSMP</span>
+        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener"> Sr.Dev • AxoSMP</a> /</span>
+        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener"> Sr.Dev • Axolotelstadt</a> /</span>
+        <span class="pill-role"> <a href="https://discord.gg/zTQ8gfnrQc" target="_blank" rel="noopener"> Dev • ManuSMP</a> /</span>
         <span class="pill-role">Eigene Plugins • AxoSMP @ Modrinth</span>
       </div>
     </div>
   </section>
-
   <section id="plugins">
     <h2 class="section-title">Plugins</h2>
     <p class="section-sub">
@@ -353,8 +297,8 @@
           Alle Inhalte werden individuell pro Spieler gespeichert.
         </p>
         <div class="meta">
-          <span><a href="https://modrinth.com/plugin/ecplus" target="_blank">ECPlus auf Modrinth →</a></span><br>
-          <span><a href="https://modrinth.com/organization/axosmp" target="_blank">AxoSMP Organisation</a></span>
+          <span>Projektseite: <a href="https://modrinth.com/plugin/ecplus" target="_blank" rel="noopener">ECPlus auf Modrinth →</a></span><br>
+          <span>Organisation: <a href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">AxoSMP</a></span>
         </div>
       </article>
 
@@ -365,34 +309,32 @@
           Die vollständige Liste deiner Projekte ist über deine Modrinth‑Organisation erreichbar.
         </p>
         <div class="meta">
-          <span><a href="https://modrinth.com/organization/axosmp" target="_blank">Alle Plugins ansehen →</a></span>
+          <span><a href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">Alle Plugins auf Modrinth ansehen →</a></span>
         </div>
       </article>
     </div>
   </section>
-
   <section id="contact">
     <h2 class="section-title">Kontakt</h2>
     <p class="section-sub">
-      Wenn du mit HaiGorilla406 an Plugins, SMP‑Projekten oder neuen Ideen arbeiten möchtest, kannst du ihn hier erreichen.
+      Wenn du mit mir HaiGorilla406 an Plugins, SMP‑Projekten oder neuen Ideen arbeiten möchtest, kannst du mich hier erreichen.
     </p>
 
     <div class="card contact-card">
       <div>
         <p>
           Für Anfragen rund um Plugins, SMP‑Infrastruktur oder Kooperationen kannst du dich direkt über Discord melden
-          oder seine Projekte auf Modrinth ansehen.
+          oder meine Projekte auf Modrinth ansehen.
         </p>
       </div>
 
       <div class="contact-links">
         <a>@HaiGorilla406</a>
         <a>ID: 6512924</a>
-        <a href="https://modrinth.com/organization/axosmp" target="_blank">Modrinth: AxoSMP</a>
+        <a href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">Modrinth: AxoSMP</a>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>
