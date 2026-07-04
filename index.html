@@ -60,6 +60,97 @@
       padding: 2.5rem 1.5rem 3.5rem;
     }
     section { margin-bottom: 3rem; }
+ 
+    /* --- Section headings (previously missing) --- */
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+      max-width: 40rem;
+    }
+ 
+    /* --- Generic card (previously missing, only hero card existed) --- */
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .card p {
+      color: var(--muted);
+    }
+    .card strong {
+      color: var(--text);
+    }
+ 
+    /* --- Simple grid layout (previously missing) --- */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+ 
+    /* --- Meta line under cards (previously missing) --- */
+    .meta {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .meta a { color: var(--accent); }
+ 
+    /* --- Role pills in "Über mich" (previously missing) --- */
+    .pill-role {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-right: 0.2rem;
+    }
+    .pill-role-strong a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+ 
+    /* --- Contact section layout (previously missing) --- */
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      min-width: 200px;
+    }
+    .contact-links a {
+      color: var(--accent);
+    }
+ 
+    /* --- Footer (previously unstyled) --- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+ 
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -208,7 +299,7 @@
     </nav>
   </div>
 </header>
-
+ 
 <main>
   <section class="hero">
     <div>
@@ -229,7 +320,7 @@
         </a>
       </div>
     </div>
-
+ 
     <div class="hero-right">
       <div class="pill">
         <span class="pill-dot"></span>
@@ -249,45 +340,46 @@
       </div>
       <div class="meta">
         <span>Projektseite: <a href="https://modrinth.com/plugin/ecplus" target="_blank" rel="noopener">ECPlus auf Modrinth</a></span><br>
-        <span>Projekte: <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener">AxoSMP</a><a href="https://discord.gg/RXMEh8NkT7" target="_blank" rel="noopener">ZenoSMP</a></span>
+        <span>Projekte: <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener">AxoSMP</a> · <a href="https://discord.gg/RXMEh8NkT7" target="_blank" rel="noopener">ZenoSMP</a></span>
       </div>
     </div>
   </section>
-
+ 
   <section id="about">
     <h2 class="section-title">Über mich</h2>
     <p class="section-sub">
-      Kurzprofil von Mir (HaiGorilla406) als Developer – Fokus auf SMP‑Infrastruktur, stabile Plugins und Community‑Projekte.
+      Kurzprofil von mir (HaiGorilla406) als Developer – Fokus auf SMP‑Infrastruktur, stabile Plugins und Community‑Projekte.
     </p>
-
+ 
     <div class="card">
       <p>
-        <strong>Ich</strong> bin ein Minecraft Plugin Developer und der set mehreren Jahren in verschiedenen
-        SMP‑Projekten als Entwickler aktiv. Als <strong>Sr.Dev auf AxoSMP und AxoCity / Manager auf ZenoSMP</strong> sowie
-        arbeitet ich an stabilen, sauberen und technisch durchdachten Lösungen für
+        <strong>Ich</strong> bin ein Minecraft Plugin Developer und seit mehreren Jahren in verschiedenen
+        SMP‑Projekten als Entwickler aktiv. Als <strong>Sr.Dev auf AxoSMP und AxoCity</strong> sowie
+        <strong>Manager auf ZenoSMP</strong> arbeite ich an stabilen, sauberen und technisch durchdachten Lösungen für
         Server‑Infrastruktur, Gameplay‑Systeme und Quality‑of‑Life‑Features.
       </p>
-
+ 
       <p style="margin-top:0.6rem;">
         Mein Fokus liegt auf klarer Kommunikation, ruhigem und lösungsorientiertem Arbeiten sowie dem Anspruch,
-        Probleme gründlich und nachhaltig zu lösen. Mit eigenen Projekten wie <strong>ECPlus</strong> veröffentlicht er
-        moderne, zuverlässige Plugins über die <strong>AxoSMP‑Organisation auf Modrinth und bald auch auf builtbybit</strong>.
+        Probleme gründlich und nachhaltig zu lösen. Mit eigenen Projekten wie <strong>ECPlus</strong> veröffentliche ich
+        moderne, zuverlässige Plugins über die <strong>AxoSMP‑Organisation auf Modrinth und bald auch auf BuiltByBit</strong>.
       </p>
-
+ 
       <div style="margin-top:0.8rem;">
-        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener"> Sr.Dev • AxoSMP</a> /</span>
-        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener"> Sr.Dev • AxoCity</a> /</span>
-        <span class="pill-role pill-role-strong"> <a href="https://discord.gg/RXMEh8NkT7" target="_blank" rel="noopener"> Manager • ZenoSMP</a> /</span>
+        <span class="pill-role pill-role-strong"><a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener">Sr.Dev • AxoSMP</a> /</span>
+        <span class="pill-role pill-role-strong"><a href="https://discord.gg/5srScwMzRt" target="_blank" rel="noopener">Sr.Dev • AxoCity</a> /</span>
+        <span class="pill-role pill-role-strong"><a href="https://discord.gg/RXMEh8NkT7" target="_blank" rel="noopener">Manager • ZenoSMP</a> /</span>
         <span class="pill-role">Eigene Plugins • AxoSMP @ Modrinth</span>
       </div>
     </div>
   </section>
+ 
   <section id="plugins">
     <h2 class="section-title">Plugins</h2>
     <p class="section-sub">
       ECPlus im Fokus – weitere Projekte findest du über die AxoSMP‑Organisation auf Modrinth.
     </p>
-
+ 
     <div class="grid grid-2">
       <article class="card">
         <h3>ECPlus</h3>
@@ -301,13 +393,13 @@
           <span>Organisation: <a href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">AxoSMP</a></span>
         </div>
       </article>
-
+ 
       <article class="card">
         <h3>Weitere Plugins & Projekte</h3>
         <p>
-          Neben ECPlus arbeitest ich an mehreren Plugins und Tools für AxoSMP, Axolotelstadt und ZenoSMP.
-          Die Liste Meiner Projekte ist über deine Modrinth‑Organisation erreichbar.
-          Die Liste wird nach und nach aktualisiert.
+          Neben ECPlus arbeite ich an mehreren Plugins und Tools für AxoSMP, Axolotelstadt und ZenoSMP.
+          Die Liste meiner Projekte ist über meine Modrinth‑Organisation erreichbar
+          und wird nach und nach aktualisiert.
         </p>
         <div class="meta">
           <span><a href="https://modrinth.com/organization/axosmp" target="_blank" rel="noopener">Alle Plugins auf Modrinth ansehen →</a></span>
@@ -315,12 +407,13 @@
       </article>
     </div>
   </section>
+ 
   <section id="contact">
     <h2 class="section-title">Kontakt</h2>
     <p class="section-sub">
-      Wenn du mit mir HaiGorilla406 an Plugins, SMP‑Projekten oder neuen Ideen arbeiten möchtest, kannst du mich hier erreichen.
+      Wenn du mit mir, HaiGorilla406, an Plugins, SMP‑Projekten oder neuen Ideen arbeiten möchtest, kannst du mich hier erreichen.
     </p>
-
+ 
     <div class="card contact-card">
       <div>
         <p>
@@ -328,7 +421,7 @@
           oder meine Projekte auf Modrinth ansehen.
         </p>
       </div>
-
+ 
       <div class="contact-links">
         <a>@HaiGorilla406</a>
         <a>ID: 6512924</a>
@@ -337,14 +430,14 @@
     </div>
   </section>
 </main>
-
+ 
 <footer>
   © <span id="year"></span> HaiGorilla406 – Minecraft Plugin Developer • ECPlus & SMP‑Infrastruktur
 </footer>
-
+ 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
+ 
 </body>
 </html>
